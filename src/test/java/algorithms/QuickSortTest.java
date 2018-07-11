@@ -16,4 +16,8 @@ public class QuickSortTest {
         testSortingMethod(QuickSort::quickSort2);
     }
 
+    @Test
+    public void quickSort3() {
+        testSortingMethod(QuickSort::quickSort3);
+    }
 }

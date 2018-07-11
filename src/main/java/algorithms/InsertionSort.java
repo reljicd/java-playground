@@ -27,7 +27,6 @@ class InsertionSort {
             for (int j = i; j > 0; j--) {
                 if (intListForSorting.get(j) > intListForSorting.get(j - 1)) break;
                 Collections.swap(intListForSorting, j, j - 1);
-
             }
         }
 

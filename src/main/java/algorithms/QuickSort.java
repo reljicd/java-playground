@@ -51,4 +51,23 @@ class QuickSort {
         return sortedList;
     }
 
+    static List<Integer> quickSort3(List<Integer> intList) {
+
+        if (intList.size() <= 1) return intList;
+
+        List<Integer> less = new ArrayList<>();
+        List<Integer> equal = new ArrayList<>();
+        List<Integer> greater = new ArrayList<>();
+
+        intList.forEach(integer -> {
+            if (integer < intList.get(0)) less.add(integer);
+            if (integer.equals(intList.get(0))) equal.add(integer);
+            if (integer > intList.get(0)) greater.add(integer);
+        });
+
+        return Stream.of(quickSort3(less), quickSort3(equal), quickSort3(greater))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
+    }
+
 }

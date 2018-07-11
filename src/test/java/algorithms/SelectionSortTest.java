@@ -10,4 +10,14 @@ public class SelectionSortTest {
     public void selectionSort1() {
         testSortingMethod(SelectionSort::selectionSort1);
     }
+
+    @Test
+    public void selectionSort2() {
+        testSortingMethod(SelectionSort::selectionSort2);
+    }
+
+    @Test
+    public void selectionSort3() {
+        testSortingMethod(SelectionSort::selectionSort3);
+    }
 }
